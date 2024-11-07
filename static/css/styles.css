@@ -1,0 +1,184 @@
+/* General Styles */
+/* Correct way to reference an image in CSS */
+body {
+    background: url('{{ url_for("static", filename="images/Boikanyo.jpg") }}') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* About Section */
+.about {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Education Section */
+.education {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.education h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Skills Section */
+.skills {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.skills h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    font-size: 1.5em;
+    color: #2C3E50;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Chatbot Section Styling */
+.chatbot {
+    position: fixed;
+    bottom: 30px; /* Slightly lower for more space */
+    right: 30px;  /* Slightly more to the left for better positioning */
+    background-color: #fff;
+    border-radius: 12px;  /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    width: 400px;  /* Increase width to make the chatbot larger */
+    height: 550px; /* Increase height to give more room for conversation */
+    padding: 25px; /* Increase padding for better spacing */
+    z-index: 1000;
+}
+
+.chatbot h2 {
+    font-size: 20px;  /* Larger title size */
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px; /* Add more space below the title */
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;  /* Make the chatbox use the full height */
+}
+
+.messages {
+    overflow-y: auto;
+    max-height: 350px;  /* Increase max-height for more visible message space */
+    margin-bottom: 20px; /* Add some space between messages and form */
+    padding: 10px;  /* Add more padding for better appearance */
+    border: 1px solid #ddd;
+    border-radius: 8px;  /* Slightly rounded corners */
+    background-color: #f9f9f9;
+}
+
+.user-message {
+    padding: 8px;
+    background-color: #f1f1f1;
+    margin: 8px 0;
+    border-radius: 8px;  /* Slightly rounded message boxes */
+}
+
+form input, form textarea {
+    padding: 12px;  /* Increase padding for better input area */
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;  /* Slightly more rounded */
+    width: 100%;
+}
+
+form button {
+    background-color: #2C3E50;
+    color: white;
+    padding: 12px;  /* Larger button padding */
+    border: none;
+    border-radius: 8px;  /* Rounded corners */
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #34495E;
+}
+
+/* Footer Section */
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 1.8em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #3498db;
+}

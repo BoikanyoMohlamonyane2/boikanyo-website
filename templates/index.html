@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohlamonyane Boikanyo | Computer Science Graduate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}" defer></script>
+    
+    <!-- Include Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container with background image on the left side -->
+    <div class="main-content">
+        <header>
+            <div class="container">
+                <h1>Mohlamonyane Boikanyo</h1>
+                <p>Computer Science Graduate | Intern at ICEP, TUT</p>
+            </div>
+        </header>
+
+        <!-- Display Flash Messages -->
+        <div class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul>
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <section class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello, I'm Boikanyo Mohlamonyane, a Computer Science graduate with a diploma from Tshwane University of Technology (TUT). I am currently doing an internship at ICEP at TUT, where I am gaining hands-on experience in programming, networking, and database management. My objective is to obtain a graduate position in the tech space at a respected organization where I can utilize the skills and knowledge I have acquired throughout my academic career.</p>
+            </div>
+        </section>
+
+        <section class="education">
+            <div class="container">
+                <h2>Education</h2>
+                <p><strong>Diploma in Computer Science</strong><br>
+                   Tshwane University of Technology (TUT)<br>
+                   2020 - 2023
+                </p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <p>Java, JavaScript, HTML, CSS, Kotlin</p>
+                </div>
+                <div class="skill">
+                    <h3>Networking & Security</h3>
+                    <p>CISCO, Linux, Security</p>
+                </div>
+                <div class="skill">
+                    <h3>Databases</h3>
+                    <p>MySQL, PL/SQL, Oracle</p>
+                </div>
+                <div class="skill">
+                    <h3>Computer Skills</h3>
+                    <p>Microsoft Word, PowerPoint, Excel</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> <a href="mailto:boikanyokanyo481@gmail.com">boikanyokanyo481@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+27826674431">082 667 4431</a></p>
+                <p><strong>Location:</strong> Mathebe Street, Dennilton 1030</p>
+            </div>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section id="chatbot" class="chatbot">
+            <div class="container">
+                <h2>Chat with me</h2>
+                <div class="chatbox">
+                    <div class="messages" id="chat-messages"></div>
+                    <form action="/send_message" method="POST" id="chat-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Mohlamonyane Boikanyo. All rights reserved.</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div> <!-- End main-content -->
+</body>
+</html>
